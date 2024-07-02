@@ -84,26 +84,29 @@ function Home() {
               
               <Row justify='center' gutter={16}>
 
-                   {totalCars.map(car=>{
-                       return <Col lg={5} sm={24} xs={24}>
-                            <div className="car p-2 bs1">
-                               <img src={car.image} className="carimg"/>
+                 {totalCars && Array.isArray(totalCars) && totalCars.map(car => (
+    <Col lg={5} sm={24} xs={24} key={car._id}>
+        <div className="car p-2 bs1">
+            <img src={car.image} className="carimg" />
 
-                               <div className="car-content d-flex align-items-center justify-content-between">
+            <div className="car-content d-flex align-items-center justify-content-between">
 
-                                    <div className='text-left pl-2'>
-                                        <p>{car.name}</p>
-                                        <p> Rent Per Hour {car.rentPerHour} /-</p>
-                                    </div>
+                <div className='text-left pl-2'>
+                    <p>{car.name}</p>
+                    <p>Rent Per Hour {car.rentPerHour} /-</p>
+                </div>
 
-                                    <div>
-                                        <button className="btn1 mr-2"><Link to={`/booking/${car._id}`}>Book Now</Link></button>
-                                    </div>
+                <div>
+                    <button className="btn1 mr-2">
+                        <Link to={`/booking/${car._id}`}>Book Now</Link>
+                    </button>
+                </div>
 
-                               </div>
-                            </div>
-                       </Col>
-                   })}
+            </div>
+        </div>
+    </Col>
+))}
+
 
               </Row>
 
