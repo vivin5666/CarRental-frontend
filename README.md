@@ -41,9 +41,6 @@ URL - https://test-project-021b.onrender.com/admin
 ### ➡️ Add Car Page
 URL - https://test-project-021b.onrender.com/addcar
 
-### ➡️ Task Lists
-URL - https://project-management-tool-mern.netlify.app/dashboard?tab=tasklists
-
 ### Tech Stack
 
 ### FRONTEND 
